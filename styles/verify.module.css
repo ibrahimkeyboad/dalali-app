@@ -1,0 +1,11 @@
+.form {
+  @apply p-5 shadow-xl max-w-[600px] my-20 mx-auto rounded-lg flex flex-col gap-3 text-[#15314d];
+}
+
+.input {
+  @apply border-b-2 focus:border-[#098366] outline-none p-2 w-[70%];
+}
+
+.btn {
+  @apply text-white bg-[#15314d] w-[30%] rounded-lg p-2;
+}

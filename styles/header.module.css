@@ -1,0 +1,15 @@
+.header {
+  @apply px-5 py-3 max-w-7xl m-auto flex flex-col;
+}
+
+.nav {
+  @apply flex justify-between items-center flex-wrap place-content-around md:px-9;
+}
+
+.logo {
+  @apply text-[#034047] font-bold text-2xl;
+}
+
+.input {
+  @apply py-0.5 px-4 basis-[90%] border-2 border-transparent rounded-tl-full rounded-bl-full outline-none focus:border-[#034047];
+}

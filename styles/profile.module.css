@@ -1,0 +1,23 @@
+.heading {
+  @apply text-2xl  text-[#fff] tracking-wide;
+}
+
+.container {
+  @apply p-3 text-[#15314d] max-w-[1240px] m-auto text-xl flex justify-center;
+}
+
+.form {
+  @apply flex flex-col md:w-[600px] w-[450px] mt-10 text-base  gap-6 shadow-lg  rounded-3xl overflow-hidden;
+}
+
+.input {
+  @apply border-2 rounded-xl w-[100%] outline-none focus:border-[#098366] p-2;
+}
+
+.desc {
+  @apply text-gray-500 text-base ml-3;
+}
+
+.btn {
+  @apply bg-[#15314d] text-white px-16 self-center py-2 text-lg rounded-lg;
+}

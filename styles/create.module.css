@@ -1,0 +1,57 @@
+.createSection {
+  @apply bg-gray-50;
+}
+.heading {
+  @apply flex py-5 justify-center gap-10 px-10 rounded-lg;
+}
+
+.formContainer {
+  @apply max-w-[960px] flex flex-col px-2 text-[#15314d] m-auto;
+}
+
+.container {
+  @apply bg-white  py-6 px-4 rounded-lg shadow-lg;
+}
+
+.details {
+  @apply flex flex-col gap-6 w-[100%] px-3 py-1 rounded-md;
+}
+
+.imgUploadContainer {
+  @apply flex gap-4 flex-col my-4 bg-white py-10 px-5;
+}
+.imgUpload {
+  @apply mt-3 h-[400px] border-b-2;
+}
+
+.buttonUpload {
+  @apply bg-[#15314d] inline-block w-[150px] relative p-3 text-white text-center cursor-pointer font-bold rounded-md;
+}
+
+.inputImg {
+  @apply inline-block border w-[90px] cursor-pointer absolute border-fuchsia-800 opacity-0 z-[21];
+}
+
+.imgContainer {
+  @apply flex flex-wrap gap-4 mt-5;
+}
+
+.noImages {
+  @apply flex flex-col items-center justify-center w-[100%] h-[100%];
+}
+
+.img {
+  @apply relative my-2 h-[50px] w-[100px];
+}
+
+.icon {
+  @apply text-gray-700 cursor-pointer hover:text-red-600;
+}
+
+.textinput {
+  @apply border rounded-md placeholder:text-slate-400 text-gray-700 focus:border-[#098366]  py-1 px-4 outline-none;
+}
+
+.btn {
+  @apply bg-[#15314d] text-white font-bold text-xl my-5 py-2 self-center px-20 rounded-lg;
+}

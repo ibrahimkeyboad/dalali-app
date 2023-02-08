@@ -1,0 +1,72 @@
+.detailSection {
+  @apply max-w-[1120px] px-3 md:px-10 m-auto;
+}
+
+.imgContainer {
+  @apply border-b-2 border-[#ccdedf] pb-2;
+}
+
+.bgImg {
+  @apply relative max-w-[100%] h-[400px] lg:h-[600px];
+}
+
+.img {
+  @apply rounded-lg object-cover;
+}
+
+.smallImgContainer {
+  @apply flex gap-3 mt-3;
+}
+
+.figure {
+  @apply relative w-[100px] h-[80px];
+}
+
+.overveiw {
+  @apply p-3 my-4 bg-white rounded-sm divide-y;
+}
+
+.overveiw_head {
+  @apply flex items-center justify-between p-5;
+}
+
+.heading {
+  @apply text-[#2B4865] tracking-widest font-bold text-2xl;
+}
+
+.badge {
+  @apply bg-[#49b69c] p-1 rounded-md uppercase text-sm m-1 inline-block text-[#FFF];
+}
+
+.details {
+  @apply p-4 flex gap-8 md:items-center flex-col md:flex-row items-start justify-between;
+}
+
+.detail_dsc {
+  @apply md:flex gap-2 flex-col;
+}
+.detail_head {
+  @apply flex gap-2;
+}
+.detail_text {
+  @apply text-[#034047] font-bold;
+}
+
+.user_detail {
+  @apply flex items-center gap-4;
+}
+
+.user_desc {
+  @apply flex flex-col;
+}
+
+.user_name {
+  @apply text-[#034047] font-bold tracking-wide text-lg;
+}
+.user_number {
+  @apply text-[#034047] font-bold;
+}
+
+.type {
+  @apply flex p-4 gap-5 flex-col items-center;
+}
