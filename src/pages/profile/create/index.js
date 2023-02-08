@@ -6,7 +6,7 @@ import style from '../../../../styles/create.module.css';
 import UploadImage from '../../../components/uploadImage';
 import Aside from '../../../components/aside';
 import Loader from '../../../components/spinner/loader';
-import { usePostApartmentMutation } from '../../../../context/apartmentSlice';
+import { usePostApartmentMutation } from '../../../context/apartmentSlice';
 import { useSession } from 'next-auth/react';
 import { SelectTags, SelectPer } from '../../../components/CustomSelect';
 import HeadC from '../../../components/head';

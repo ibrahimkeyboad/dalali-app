@@ -1,11 +1,11 @@
 'use client';
 import ImageDropDiv from '../../../components/ImageDropDiv';
 import { unstable_getServerSession } from 'next-auth/next';
-import style from '../../../styles/profile.module.css';
+import style from '../../../../styles/profile.module.css';
 import Aside from '../../../components/aside';
 import { authOptions } from '../../api/auth/[...nextauth]';
 import { useFormik } from 'formik';
-import prisma from '../../../db';
+import prisma from '../../../../db';
 import { useEffect, useState } from 'react';
 import HeadC from '../../../components/head';
 import Loader from '../../../components/spinner/loader';

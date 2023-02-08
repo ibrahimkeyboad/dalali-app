@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { IoFilter } from 'react-icons/io5';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleHandler } from '../context/sliceApp';
-import { filterData } from '../util/filtterData';
+import { filterData } from '../../util/filtterData';
 import { CustomSelect } from './CustomSelect';
 
 function FilterSeach() {
