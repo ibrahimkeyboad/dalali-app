@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import Container from '../../components/main';
 import ProfileHeader from '../../components/ProfileHeader';
-import prisma from '../../db';
+import prisma from '../.././../db';
 import { authOptions } from '../api/auth/[...nextauth]';
 
 export async function getServerSideProps({ req, res }) {
