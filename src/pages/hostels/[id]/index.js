@@ -42,27 +42,6 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getServerSideProps({ query }) {
-  const data = await prisma.accommodation.findUnique({
-    where: {
-      id: query.id,
-    },
-    include: {
-      images: true,
-      tags: true,
-      owner: {
-        include: {
-          profile: true,
-        },
-      },
-    },
-  });
-
-  return {
-    props: { data },
-  };
-}
-
 function Page({ data }) {
   return (
     <div className='bg-slate-50'>
