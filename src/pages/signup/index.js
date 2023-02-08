@@ -1,4 +1,4 @@
-import style from '../../styles/signup.module.css';
+import style from '../../../styles/signup.module.css';
 import { useEffect } from 'react';
 import TellPhone from '../../components/tellphone';
 import { useRouter } from 'next/navigation';
@@ -70,7 +70,6 @@ function Signup() {
 
     signup(data);
   }
-
 
   useEffect(() => {
     if (isSuccess) {

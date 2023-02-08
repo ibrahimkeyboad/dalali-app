@@ -2,7 +2,7 @@ import React from 'react';
 import Filter from '../../components/filter';
 import HeadC from '../../components/head';
 import Container from '../../components/main';
-import prisma from '../../db';
+import prisma from '../../../db';
 
 export async function getServerSideProps({ query }) {
   console.log(query);

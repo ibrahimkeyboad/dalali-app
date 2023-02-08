@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { IoMdAdd } from 'react-icons/io';
 import React, { useEffect, useState } from 'react';
-import { imageUpload } from '../../util/cloudinary';
+import { imageUpload } from '../../../util/cloudinary';
 import { useRouter } from 'next/router';
 import { useCreateProfieMutation } from '../../context/authSlice';
 import { useFormik } from 'formik';
