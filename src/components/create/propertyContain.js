@@ -17,7 +17,7 @@ function PropertyContain({ style }) {
   }
 
   return (
-    <div className={`items-center ${style.container}`}>
+    <div className={`items-center dark:bg-slate-900 ${style.container}`}>
       <div className='flex flex-col md:flex-row gap-3'>
         <h3>Property contain </h3>
 

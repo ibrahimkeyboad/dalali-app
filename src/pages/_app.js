@@ -2,6 +2,7 @@ import { SessionProvider } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from 'next-themes';
 import Header from '../components/header';
 import store from '../context/store';
 import NProgress from 'nprogress';
@@ -40,15 +41,15 @@ function MyApp({ Component, pageProps }) {
     asPath.includes('profile');
 
   return (
-    <SessionProvider session={pageProps.session}>
-      <Provider store={store}>
-        {!notShow && <Header />}
-
-        <Component {...pageProps} />
-
-        <Analytics />
-      </Provider>
-    </SessionProvider>
+    <ThemeProvider enableSystem={true} attribute='class'>
+      <SessionProvider session={pageProps.session}>
+        <Provider store={store}>
+          {!notShow && <Header />}
+          <Component {...pageProps} />
+          <Analytics />
+        </Provider>
+      </SessionProvider>
+    </ThemeProvider>
   );
 }
 

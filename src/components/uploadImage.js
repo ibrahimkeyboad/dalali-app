@@ -5,7 +5,8 @@ import { MdClear } from 'react-icons/md';
 
 function UploadImage({ images, imageHandler, removeHandler, style }) {
   return (
-    <div className={`${style.imgUploadContainer} ${style.container}`}>
+    <div
+      className={`${style.imgUploadContainer} dark:bg-slate-900 ${style.container}`}>
       <label className={style.buttonUpload}>
         <span>Add image</span>
 

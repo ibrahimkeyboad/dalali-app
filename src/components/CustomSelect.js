@@ -20,7 +20,7 @@ export function SelectTags({ onChange, style }) {
     { value: 'CCTV Security', label: 'CCTV Security' },
   ];
   return (
-    <div className={`grid gap-1 ${style.container}`}>
+    <div className={`grid gap-1 dark:bg-slate-900 ${style.container}`}>
       <label>Write or select things that contains in your property</label>
       <CreatableSelect
         required

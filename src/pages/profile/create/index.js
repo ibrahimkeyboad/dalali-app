@@ -12,6 +12,7 @@ import { SelectTags, SelectPer } from '../../../components/CustomSelect';
 import HeadC from '../../../components/head';
 import FormInput from '../../../components/FormInput';
 import PropertyContain from '../../../components/create/propertyContain';
+import { HiMoon, HiSun } from 'react-icons/hi';
 
 function Create() {
   const navigate = useRouter();
@@ -97,7 +98,7 @@ function Create() {
   }
 
   return (
-    <section className={style.createSection}>
+    <section className={`bg-gray-50 dark:bg-slate-900`}>
       <HeadC title='Create Property' description='create property to upload' />
       <Aside />
       <div className={style.heading}>
@@ -111,7 +112,7 @@ function Create() {
           <label className='text-2xl font-bold'>Details</label>
           <div className={style.details}>
             <div
-              className={`grid ${style.container} md:grid-cols-2 md:items-end gap-6 items-start`}>
+              className={`grid dark:bg-slate-900 ${style.container} md:grid-cols-2 md:items-end gap-6 items-start`}>
               <div>
                 <p className='text-[14px]'>{`Title that describe your property`}</p>
                 <FormInput hint='Title' label='Title' name='title' />
@@ -127,7 +128,7 @@ function Create() {
             </div>
 
             <div
-              className={`grid md:grid-cols-2 items-center gap-3 ${style.container}`}>
+              className={`grid md:grid-cols-2 dark:bg-slate-900 items-center gap-3 ${style.container}`}>
               <div>
                 <p className='text-[14px]'>{`Where's your property located?`}</p>
 
@@ -139,7 +140,7 @@ function Create() {
 
             <PropertyContain style={style} />
 
-            <div className={`${style.container} md:p-10`}>
+            <div className={`${style.container} dark:bg-slate-900 md:p-10`}>
               <p className='text-[14px]'>Inter Price and price per duration</p>
               <label>Price</label>
               <div className='flex flex-col md:flex-row md:items-center px-4 gap-5 md:gap-10'>
@@ -151,13 +152,14 @@ function Create() {
             </div>
             <SelectTags style={style} onChange={changeHandler} />
 
-            <div className={`flex flex-col gap-2 ${style.container}`}>
+            <div
+              className={`flex flex-col gap-2 dark:bg-slate-900 ${style.container}`}>
               <label className='text-sm text-gray-600'>
                 Add description to describe addition things
               </label>
               <textarea
                 rows={4}
-                className={style.textinput}
+                className={`${style.textinput}`}
                 type='text'
                 placeholder='Description'
                 name='description'

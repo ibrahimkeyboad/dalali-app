@@ -1,6 +1,6 @@
 'use client';
 import ImageDropDiv from '../../../components/ImageDropDiv';
-import { unstable_getServerSession } from 'next-auth/next';
+import { getServerSession } from 'next-auth/next';
 import style from '../../../../styles/profile.module.css';
 import Aside from '../../../components/aside';
 import { authOptions } from '../../api/auth/[...nextauth]';
@@ -12,7 +12,7 @@ import Loader from '../../../components/spinner/loader';
 import { useUpdateProfileMutation } from '../../../context/authSlice';
 
 export async function getServerSideProps(context) {
-  const sessionData = await unstable_getServerSession(
+  const sessionData = await getServerSession(
     context.req,
     context.res,
     authOptions

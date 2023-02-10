@@ -1,4 +1,4 @@
-import { unstable_getServerSession } from 'next-auth';
+import { getServerSession } from 'next-auth';
 import Link from 'next/link';
 import React from 'react';
 import Aside from '../../components/aside';
@@ -8,7 +8,7 @@ import prisma from '../../../db';
 import { authOptions } from '../api/auth/[...nextauth]';
 
 export async function getServerSideProps({ req, res }) {
-  const { user } = await unstable_getServerSession(req, res, authOptions);
+  const { user } = await getServerSession(req, res, authOptions);
   const data = await prisma.accommodation.findMany({
     where: {
       isAvailable: false,

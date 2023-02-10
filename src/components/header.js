@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { HiMoon, HiSun } from 'react-icons/hi';
 import { links } from '../../util/links';
 import Image from 'next/image';
 import { HiSearch } from 'react-icons/hi';
@@ -7,8 +8,12 @@ import { useSession } from 'next-auth/react';
 import style from '../../styles/header.module.css';
 
 import { useFormik } from 'formik';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 function Header() {
+  const [mouted, setMouted] = useState(false);
+  const { setTheme, systemTheme, theme } = useTheme();
   const { data } = useSession();
   const { asPath, push, query } = useRouter();
   const formik = useFormik({
@@ -22,6 +27,33 @@ function Header() {
   function onSubmitHandler(value) {
     query.location = value.location;
     push({ pathname: '/search', query });
+  }
+
+  useEffect(() => {
+    setMouted(true);
+  }, []);
+
+  function changeTheme() {
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+    if (!mouted) return null;
+
+    if (currentTheme === 'dark') {
+      return (
+        <HiSun
+          className='w-7 h-7'
+          role='button'
+          onClick={() => setTheme('light')}
+        />
+      );
+    } else {
+      return (
+        <HiMoon
+          className='w-7 h-7'
+          role='button'
+          onClick={() => setTheme('dark')}
+        />
+      );
+    }
   }
 
   return (
@@ -46,6 +78,8 @@ function Header() {
             <HiSearch size={20} />
           </button>
         </form>
+
+        {changeTheme()}
 
         {data ? (
           <Link href='/profile' className='relative h-12 w-12'>
