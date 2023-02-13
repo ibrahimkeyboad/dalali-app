@@ -7,11 +7,7 @@ import prisma from '../../../../db';
 export async function getStaticPaths() {
   const datas = await prisma.accommodation.findMany();
 
-  console.log(datas);
-
   const paths = datas.map((item) => ({ params: { id: item.id } }));
-
-  console.log(paths);
 
   return {
     paths,
@@ -43,7 +39,6 @@ export async function getStaticProps({ params }) {
 }
 
 function Page({ data }) {
-  console.log(data);
   return (
     <div className='bg-slate-50 dark:bg-[#0a192f]'>
       <HeadC title={data.title} description={data.description} />

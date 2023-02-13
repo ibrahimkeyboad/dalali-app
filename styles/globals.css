@@ -25,6 +25,13 @@
 
 #nprogress .bar {
   height: 5px;
+  background: #64ffda;
+  padding: 0 10px;
+}
+
+#nprogress .spinner .spinner-icon {
+  border-top-color: #64ffda;
+  border-left-color: #64ffda;
 }
 
 .swiper-button-prev,

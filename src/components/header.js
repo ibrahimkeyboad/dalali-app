@@ -94,11 +94,11 @@ function Header() {
           </Link>
         ) : (
           <div className='flex gap-4 items-center'>
-            <Link className='text-[#64FFDA] px-3 py-1' href='/login'>
+            <Link className='dark:text-[#64FFDA] px-3 py-1' href='/login'>
               Login
             </Link>
             <Link
-              className='bg-[#64FFDA] font-semibold text-white px-3 py-2 rounded-xl'
+              className='dark:bg-[#64FFDA] font-semibold text-white px-3 py-2 rounded-xl'
               href='/signup'>
               Get Start
             </Link>
@@ -113,7 +113,7 @@ function Header() {
               key={link.name}
               className={`text-sm whitespace-nowrap my-3 mx-0 md:mx-4 ${
                 asPath === link.link
-                  ? 'text-[#64FFDA] font-bold'
+                  ? 'dark:text-[#64FFDA] text-[#00ceb8] font-bold'
                   : ' text-[#b0b7cf]'
               }`}
               href={link.link}>

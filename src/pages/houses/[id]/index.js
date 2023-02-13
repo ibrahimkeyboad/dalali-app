@@ -7,11 +7,7 @@ import prisma from '../../../../db';
 export async function getStaticPaths() {
   const datas = await prisma.accommodation.findMany();
 
-  console.log(datas);
-
   const paths = datas.map((item) => ({ params: { id: item.id } }));
-
-  console.log(paths);
 
   return {
     paths,

@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
       NProgress.start();
       NProgress.set(0.4);
     };
-
+    ('64FFDA');
     const handleStop = () => {
       NProgress.done();
     };
