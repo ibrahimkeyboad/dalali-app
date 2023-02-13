@@ -1,5 +1,27 @@
 import React from 'react';
 import CreatableSelect from 'react-select/creatable';
+import { useTheme } from 'next-themes';
+
+export const styleControl = {
+  option: (styles) => ({
+    ...styles,
+    backgroundColor: '#112240',
+    '&:hover': {
+      backgroundColor: '#64ffda',
+      color: '#112240',
+    },
+  }),
+  control: (base, state) => ({
+    ...base,
+    background: '#112240',
+    borderColor: state.isFocused ? 'white' : 'gray',
+    '&:hover': {
+      // Overwrittes the different states of border
+      borderColor: state.isFocused ? 'white' : 'gray',
+      backgroundColor: state.isFocused ? '#112240' : '#0A192F',
+    },
+  }),
+};
 
 export function SelectTags({ onChange, style }) {
   const options = [
@@ -20,9 +42,11 @@ export function SelectTags({ onChange, style }) {
     { value: 'CCTV Security', label: 'CCTV Security' },
   ];
   return (
-    <div className={`grid gap-1 dark:bg-slate-900 ${style.container}`}>
+    <div className={`grid gap-1 dark:bg-[#112240] ${style.container}`}>
       <label>Write or select things that contains in your property</label>
       <CreatableSelect
+        className='bg-black'
+        styles={styleControl}
         required
         onChange={onChange}
         isMulti
@@ -43,6 +67,7 @@ export function SelectPer({ onChange }) {
   return (
     <div>
       <CreatableSelect
+        styles={styleControl}
         options={options}
         required
         onChange={onChange}

@@ -12,7 +12,6 @@ import { SelectTags, SelectPer } from '../../../components/CustomSelect';
 import HeadC from '../../../components/head';
 import FormInput from '../../../components/FormInput';
 import PropertyContain from '../../../components/create/propertyContain';
-import { HiMoon, HiSun } from 'react-icons/hi';
 
 function Create() {
   const navigate = useRouter();
@@ -98,29 +97,31 @@ function Create() {
   }
 
   return (
-    <section className={`bg-gray-50 dark:bg-slate-900`}>
+    <section className={`bg-gray-50 dark:bg-[#0a192f]`}>
       <HeadC title='Create Property' description='create property to upload' />
       <Aside />
       <div className={style.heading}>
-        <h2 className={style.head}>Add new property</h2>
+        <h2 className='text-[#d9dfe8]'>Add new property</h2>
       </div>
-      <form onSubmit={submitHnadler} className={style.formContainer}>
+      <form
+        onSubmit={submitHnadler}
+        className={`dark:text-[#d9dfe8] ${style.formContainer}`}>
         {/* <Options /> */}
 
         {/* Descrptions */}
         <div className='flex gap-4 flex-col'>
-          <label className='text-2xl font-bold'>Details</label>
+          <label className='text-2xl text-[#CCD6F6] font-bold'>Details</label>
           <div className={style.details}>
             <div
-              className={`grid dark:bg-slate-900 ${style.container} md:grid-cols-2 md:items-end gap-6 items-start`}>
+              className={`grid dark:bg-[#112240] ${style.container} md:grid-cols-2 md:items-end gap-6 items-start`}>
               <div>
-                <p className='text-[14px]'>{`Title that describe your property`}</p>
+                <p className='text-[14px] text-[#626D89]'>{`Title that describe your property`}</p>
                 <FormInput hint='Title' label='Title' name='title' />
               </div>
 
               <select
                 name='purpose'
-                className='outline-none border-2 p-2 focus:border-[#098366] '>
+                className='outline-none border-2 p-2 dark:bg-[#112240] text-[#CCD6F6]'>
                 <option>Select propurse</option>
                 <option value='Rent'>Rent</option>
                 <option value='Sell'>Sell</option>
@@ -128,7 +129,7 @@ function Create() {
             </div>
 
             <div
-              className={`grid md:grid-cols-2 dark:bg-slate-900 items-center gap-3 ${style.container}`}>
+              className={`grid md:grid-cols-2 dark:bg-[#112240] items-center gap-3 ${style.container}`}>
               <div>
                 <p className='text-[14px]'>{`Where's your property located?`}</p>
 
@@ -140,7 +141,7 @@ function Create() {
 
             <PropertyContain style={style} />
 
-            <div className={`${style.container} dark:bg-slate-900 md:p-10`}>
+            <div className={`${style.container} dark:bg-[#112240] md:p-10`}>
               <p className='text-[14px]'>Inter Price and price per duration</p>
               <label>Price</label>
               <div className='flex flex-col md:flex-row md:items-center px-4 gap-5 md:gap-10'>
@@ -153,13 +154,13 @@ function Create() {
             <SelectTags style={style} onChange={changeHandler} />
 
             <div
-              className={`flex flex-col gap-2 dark:bg-slate-900 ${style.container}`}>
+              className={`flex flex-col gap-2 dark:bg-[#112240] ${style.container}`}>
               <label className='text-sm text-gray-600'>
                 Add description to describe addition things
               </label>
               <textarea
                 rows={4}
-                className={`${style.textinput}`}
+                className={`dark:bg-[#112240] focus:border-[#8892b0] ${style.textinput}`}
                 type='text'
                 placeholder='Description'
                 name='description'

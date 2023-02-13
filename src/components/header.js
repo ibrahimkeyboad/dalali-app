@@ -59,7 +59,7 @@ function Header() {
   return (
     <header className={style.header}>
       <nav className={style.nav}>
-        <Link className={style.logo} href='/'>
+        <Link className={`${style.logo} dark:text-[#CCD6F6] `} href='/'>
           Dalali
         </Link>
 
@@ -69,12 +69,12 @@ function Header() {
           <input
             {...formik.getFieldProps('location')}
             type='text'
-            className={style.input}
+            className={`${style.input} dark:bg-[#0a192f] `}
             placeholder='Search location...'
           />
           <button
             type='submit'
-            className='text-white py-1.5 px-5 basis-[8%] bg-[#034047]'>
+            className='text-white py-1.5 px-5 basis-[8%] dark:hover:bg-[#d9dfe8] dark:hover:text-[#0a192f] duration-150'>
             <HiSearch size={20} />
           </button>
         </form>
@@ -94,11 +94,11 @@ function Header() {
           </Link>
         ) : (
           <div className='flex gap-4 items-center'>
-            <Link className='text-[#034047] px-3 py-1' href='/login'>
+            <Link className='text-[#64FFDA] px-3 py-1' href='/login'>
               Login
             </Link>
             <Link
-              className='bg-[#034047] font-semibold text-white px-3 py-2 rounded-xl'
+              className='bg-[#64FFDA] font-semibold text-white px-3 py-2 rounded-xl'
               href='/signup'>
               Get Start
             </Link>
@@ -113,8 +113,8 @@ function Header() {
               key={link.name}
               className={`text-sm whitespace-nowrap my-3 mx-0 md:mx-4 ${
                 asPath === link.link
-                  ? 'text-[#034047] font-bold'
-                  : ' text-[#676767]'
+                  ? 'text-[#64FFDA] font-bold'
+                  : ' text-[#b0b7cf]'
               }`}
               href={link.link}>
               {link.name}

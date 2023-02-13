@@ -6,8 +6,9 @@ import { MdClear } from 'react-icons/md';
 function UploadImage({ images, imageHandler, removeHandler, style }) {
   return (
     <div
-      className={`${style.imgUploadContainer} dark:bg-slate-900 ${style.container}`}>
-      <label className={style.buttonUpload}>
+      className={`${style.imgUploadContainer} dark:bg-[#112240] ${style.container}`}>
+      <label
+        className={`dark:border-[#d9dfe8] bg-[#112240] border-2 dark:hover:bg-white duration-150 ${style.buttonUpload}`}>
         <span>Add image</span>
 
         <input
@@ -21,8 +22,10 @@ function UploadImage({ images, imageHandler, removeHandler, style }) {
       <div className={style.imgContainer}>
         {images.length === 0 ? (
           <div className={style.noImages}>
-            <BiImageAdd size={80} />
-            <h2>Click add button to upload same images</h2>
+            <BiImageAdd className='dark:text-[#a8b2d1]' size={80} />
+            <h2 className='dark:text-[#a8b2d1]'>
+              Click add button to upload same images
+            </h2>
           </div>
         ) : (
           images.map((img, index) => {

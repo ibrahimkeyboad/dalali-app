@@ -51,7 +51,6 @@ function LoginPage() {
         navigate.push('/profile');
       }
     }
-
   }
 
   return (
@@ -65,7 +64,7 @@ function LoginPage() {
           <button onClick={() => signOut()}>off</button>
           <div>
             <input
-              className='border-2 p-2 w-full focus:border-[#098366] outline-none rounded-lg'
+              className='border-2 p-2 w-full dark:bg-[#112240] outline-none rounded-lg'
               placeholder='Email of phone number'
               {...formik.getFieldProps('email')}
             />
@@ -75,7 +74,7 @@ function LoginPage() {
           </div>
           <div>
             <input
-              className='border-2 outline-none w-full p-2 rounded-lg focus:border-[#098366]'
+              className='border-2 outline-none  dark:bg-[#112240]  w-full p-2 rounded-lg '
               placeholder='Password'
               {...formik.getFieldProps('password')}
               type='password'

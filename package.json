@@ -12,6 +12,7 @@
     "@next/font": "13.1.6",
     "@prisma/client": "^4.10.0",
     "@reduxjs/toolkit": "^1.9.2",
+    "@stripe/stripe-js": "^1.46.0",
     "@vercel/analytics": "^0.1.8",
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
@@ -27,6 +28,7 @@
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-select": "^5.7.0",
+    "stripe": "^11.10.0",
     "swiper": "^9.0.3",
     "twilio": "^4.7.1",
     "yup": "^0.32.11"

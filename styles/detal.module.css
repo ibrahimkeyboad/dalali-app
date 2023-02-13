@@ -31,7 +31,7 @@
 }
 
 .heading {
-  @apply text-[#2B4865] tracking-widest font-bold text-2xl;
+  @apply tracking-widest font-bold text-2xl;
 }
 
 .badge {
@@ -61,10 +61,10 @@
 }
 
 .user_name {
-  @apply text-[#034047] font-bold tracking-wide text-lg;
+  @apply font-bold tracking-wide text-lg;
 }
 .user_number {
-  @apply text-[#034047] font-bold;
+  @apply font-bold;
 }
 
 .type {

@@ -35,18 +35,20 @@ function Item({ data, style }) {
           priority
         />
         <div className={style.detail}>
-          <div className='flex gap-2 text-sm text-[#496265]'>
+          <div className='flex gap-2 text-sm text-slate-400'>
             <span>{data.bathrooms} bathrooms</span>
             <span>{data.bedrooms} bedrooms</span>
             <span>{data.area} sqft</span>
           </div>
 
           <div className='flex flex-col'>
-            <h3 className={style.name}>{data.title}</h3>
+            <h3 className={` dark:text-[#CCD6F6] ${style.name}`}>
+              {data.title}
+            </h3>
             <h4 className='text-base font-semibold'>{`Tsh ${data.price
               .toString()
               .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}/${data.duration}`}</h4>
-            <h4 className={style.location}>
+            <h4 className={`dark:text-gray-400 ${style.location}`}>
               {data.street} {data.city}
             </h4>
           </div>

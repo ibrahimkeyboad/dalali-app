@@ -18,11 +18,11 @@
   @apply flex gap-4 flex-col my-4 bg-white py-10 px-5;
 }
 .imgUpload {
-  @apply mt-3 h-[400px] border-b-2;
+  @apply mt-3 h-[400px] border-[#CCD6F6] border-b-2;
 }
 
 .buttonUpload {
-  @apply bg-[#15314d] inline-block w-[150px] relative p-3 text-white text-center cursor-pointer font-bold rounded-md;
+  @apply hover:text-[#112240] inline-block w-[150px] relative p-3 text-white text-center cursor-pointer font-bold rounded-md;
 }
 
 .inputImg {
@@ -46,9 +46,9 @@
 }
 
 .textinput {
-  @apply border rounded-md placeholder:text-slate-400 text-gray-700 focus:border-[#098366]  py-1 px-4 outline-none;
+  @apply border rounded-md placeholder:text-slate-400   text-gray-700  py-1 px-4 outline-none;
 }
 
 .btn {
-  @apply bg-[#15314d] text-white font-bold text-xl my-5 py-2 self-center px-20 rounded-lg;
+  @apply border-[#496483] border-2 text-[#d9dfe8] font-bold text-xl my-5 py-2 self-center px-20 rounded-lg;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextInput from '../input';
 import Select from 'react-select';
+import { styleControl } from '../CustomSelect';
 
 function PropertyContain({ style }) {
   const [contain, setContain] = useState(false);
@@ -17,11 +18,12 @@ function PropertyContain({ style }) {
   }
 
   return (
-    <div className={`items-center dark:bg-slate-900 ${style.container}`}>
+    <div className={`items-center dark:bg-[#112240] ${style.container}`}>
       <div className='flex flex-col md:flex-row gap-3'>
         <h3>Property contain </h3>
 
         <Select
+          styles={styleControl}
           instanceId='id'
           onChange={handlerChange}
           placeholder='Select type property'

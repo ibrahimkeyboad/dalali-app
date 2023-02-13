@@ -45,11 +45,11 @@ export async function getStaticProps({ params }) {
 function Page({ data }) {
   console.log(data);
   return (
-    <div className='bg-slate-50'>
+    <div className='bg-slate-50 dark:bg-[#0a192f]'>
       <HeadC title={data.title} description={data.description} />
       <section className={style.detailSection}>
         <Figere apartment={data} />
-        <div className={style.overveiw}>
+        <div className={`dark:bg-[#112240] ${style.overveiw}`}>
           <div className={style.overveiw_head}>
             <h2 className={style.heading}>Overview</h2>
             <span className={style.badge}>For {data?.purpose}</span>
@@ -58,11 +58,15 @@ function Page({ data }) {
             <div className={style.details}>
               <div className={style.dsc}>
                 <h3 className={style.detail_head}>
-                  <span className={style.detail_text}>Price:</span>
+                  <span className={`dark:text-[#8892B0] ${style.detail_text}`}>
+                    Price:
+                  </span>
                   {data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                 </h3>
                 <h3 className={style.detail_head}>
-                  <span className={style.detail_text}>Address:</span>
+                  <span className={`dark:text-[#8892B0] ${style.detail_text}`}>
+                    Address:
+                  </span>
                   {data.location}
                 </h3>
               </div>
@@ -77,8 +81,10 @@ function Page({ data }) {
                   width={80}
                 />
                 <figcaption className={style.user_desc}>
-                  <span className={style.user_name}>{data.owner.name}</span>
-                  <span className={style.user_number}>
+                  <span className={`dark:text-[#e6f1ff] ${style.user_name}`}>
+                    {data.owner.name}
+                  </span>
+                  <span className={`dark:text-[#ccd6f6] ${style.user_number}`}>
                     {data.owner.phoneNumber}
                   </span>
                 </figcaption>
@@ -96,11 +102,13 @@ function Page({ data }) {
             </ul>
           </div>
         </div>
-        <div className='p-3 my-4 bg-white rounded-sm divide-y'>
-          <h2 className='text-[#2B4865] tracking-widest font-bold text-xl p-3 pb-5 '>
+        <div className='dark:bg-[#112240] p-3 my-4 bg-white rounded-sm divide-y'>
+          <h2 className='dark:text-[#e6f1ff] tracking-widest font-bold text-xl p-3 pb-5 '>
             Description
           </h2>
-          <p className='text-[#6d7072] p-4 tracking-wide'>{data.description}</p>
+          <p className='dark:text-gray-400 p-4 tracking-wide'>
+            {data.description}
+          </p>
         </div>
       </section>
     </div>

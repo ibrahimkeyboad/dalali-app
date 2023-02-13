@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply dark:bg-[#0a192f];
+  }
+
   h1,
   h2,
   h3,
@@ -10,6 +14,7 @@
   h5 {
     @apply font-bold;
   }
+
   h1 {
     @apply text-2xl sm:text-4xl md:text-6xl;
   }

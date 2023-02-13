@@ -29,7 +29,7 @@ function TellPhone({ country, formik, style }) {
       <select
         {...formik.getFieldProps('country')}
         name='country'
-        className='w-60 h-10 text-sm font-bold outline-none border-b-2 '>
+        className='w-60 h-10 text-sm dark:bg-[#112240] font-bold outline-none border-b-2 '>
         <option className='text-gray-500'>Select your Country</option>
         {data &&
           data.map((item) => (

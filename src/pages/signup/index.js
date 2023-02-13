@@ -14,7 +14,7 @@ import {
   useSendverifyMutation,
   useSignupMutation,
 } from '../../context/authSlice';
-
+import TextInput from '../../components/input';
 function Signup() {
   const dispatch = useDispatch();
   const { toggle, code } = useSelector((state) => state.slices);
@@ -84,17 +84,19 @@ function Signup() {
     <>
       <HeadC title='signup' description='create your account to get access' />
       <section className={style.signupSection}>
-        <form onSubmit={formik.handleSubmit} className={style.form}>
+        <form
+          onSubmit={formik.handleSubmit}
+          className={`dark:shadow-none dark:bg-[#112240] ${style.form}`}>
           <h1 className='text-2xl self-center'>Create Your Account</h1>
 
           <div className={style['input-control']}>
-            <input
+            <TextInput
               name='name'
               className={style.input}
               required
               type='text'
               {...formik.getFieldProps('name')}
-              placeholder='Full Name'
+              hint='Full Name'
             />
             {formik.errors && (
               <p className='text-red-400 text-sm'>
@@ -103,13 +105,13 @@ function Signup() {
             )}
           </div>
           <div className={style['input-control']}>
-            <input
+            <TextInput
               className={`${style.input} ${error && 'border-red-400'}`}
               required
               name='email'
               type='email'
               {...formik.getFieldProps('email')}
-              placeholder='Email'
+              hint='Email'
             />
             {formik.errors && (
               <p className='text-red-400 text-sm'>
@@ -121,13 +123,13 @@ function Signup() {
 
           <div className={style['input-control']}>
             <span className='flex items-center'>
-              <input
+              <TextInput
                 className={style.input}
                 required
                 type={toggle ? 'text' : 'password'}
                 name='password'
                 {...formik.getFieldProps('password')}
-                placeholder='Password'
+                hint='Password'
               />
               {!toggle ? (
                 <HiOutlineEyeOff
@@ -162,13 +164,13 @@ function Signup() {
             country={formik.values.country}
           />
           <div className={style['input-control']}>
-            <input
+            <TextInput
               className={style.input}
               required
               type='text'
               name='city'
               {...formik.getFieldProps('city')}
-              placeholder='City'
+              hint='City'
             />
             {formik.errors && (
               <p className='text-red-400 text-sm'>
@@ -179,7 +181,7 @@ function Signup() {
             <p className={style.desc}>add your city</p>
           </div>
           <div className='flex flex-col gap-3'>
-            <button type='submit' className={style.btn}>
+            <button type='submit' className={`dark:shadow-none ${style.btn}`}>
               {isLoading ? <Loader /> : 'Sign up'}
             </button>
             <Link className='self-center' href='/login'>

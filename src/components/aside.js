@@ -35,7 +35,7 @@ function Aside({ amount }) {
   }
   console.log('amaount', amount);
   return (
-    <aside className='bg-[#0b2744] p-2 text-white'>
+    <aside className='bg-[#0a192f] p-2 text-white'>
       <nav className='flex py-4 gap-[30vw] md:gap-[40vw] justify-center m-auto  max-w-[1240px]'>
         <Link href='/'>Dalali</Link>
 
