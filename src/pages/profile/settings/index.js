@@ -82,7 +82,7 @@ function Settings({ session }) {
       <HeadC title='Settings' description='settings page' />
       <section className={style.profile}>
         <Aside amount={session.accommodations.length} />
-        <div className={style.container}>
+        <div className={`dark:text-white ${style.container}`}>
           <form onSubmit={formik.handleSubmit} className={style.form}>
             <div className='bg-[#15314d] flex flex-col h-[150px] p-3 items-center relative'>
               <h1 className={style.heading}>Profile Setting</h1>
