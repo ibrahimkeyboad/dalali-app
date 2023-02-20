@@ -11,7 +11,7 @@
 }
 
 .img {
-  @apply rounded-lg object-cover;
+  @apply object-cover;
 }
 
 .smallImgContainer {

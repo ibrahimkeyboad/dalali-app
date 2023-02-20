@@ -19,6 +19,8 @@ function Figere({ apartment }) {
         '--swiper-navigation-size': '15px',
         fontWeight: 'bolder',
         color: '#034047',
+        overflow: 'hidden',
+        borderRadius: '7px',
       }}
       pagination={{
         type: 'fraction',
