@@ -33,6 +33,14 @@ const apartmentSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ['Apartment'],
     }),
+
+    subscrption: builder.mutation({
+      query: (data) => ({
+        url: '/checkout_sessions',
+        method: 'POST',
+        body: data,
+      }),
+    }),
   }),
 });
 
@@ -42,4 +50,5 @@ export const {
   useGetUserApatmentsQuery,
   usePostApartmentMutation,
   useUpdateApartmentMutation,
+  useSubscrptionMutation,
 } = apartmentSlice;

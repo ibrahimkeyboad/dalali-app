@@ -12,7 +12,7 @@ function TextInput({ type, name, hint, formik }) {
   } else {
     return (
       <input
-        className='border-2 rounded-md dark:bg-[#112240] outline-none p-2 w-[100%] focus:border-[#098366]'
+        className='border-2 rounded-md dark:bg-[#112240] outline-none p-2 w-[100%] focus:border-[#64ffda]'
         placeholder={hint}
         name={name}
         type={type}

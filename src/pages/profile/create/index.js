@@ -16,6 +16,7 @@ import PropertyContain from '../../../components/create/propertyContain';
 function Create() {
   const navigate = useRouter();
   const { data: session } = useSession();
+  console.log(session);
   const [postData, { isSuccess, isError }] = usePostApartmentMutation();
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -160,7 +161,7 @@ function Create() {
               </label>
               <textarea
                 rows={4}
-                className={`dark:bg-[#112240] focus:border-[#8892b0] ${style.textinput}`}
+                className={`dark:bg-[#112240] dark:text-gray-200 focus:border-[#8892b0] ${style.textinput}`}
                 type='text'
                 placeholder='Description'
                 name='description'

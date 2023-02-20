@@ -40,6 +40,7 @@ function LoginPage() {
       email: values.email.toLowerCase().trim(),
       password: values.password.toLowerCase().trim(),
     });
+    console.log(res);
 
     if (res.ok === false || res.ok === true) {
       setIsLoading(false);
@@ -47,9 +48,10 @@ function LoginPage() {
       if (res.error) {
         setError(res.error);
       }
-      if (res.ok === true) {
-        navigate.push('/profile');
-      }
+    }
+
+    if (res.ok === true) {
+      navigate.push('/profile');
     }
   }
 

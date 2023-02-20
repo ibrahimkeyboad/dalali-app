@@ -26,12 +26,12 @@ function Item({ data, style }) {
       <Link href={`/${data.type.trim()}s/${data.id}`}>
         <Image
           placeholder='blur'
-          blurDataURL={data.images[0].url}
+          blurDataURL={data.images[1].url}
           src={data.images[0].url}
-          className='rounded-lg object-cover'
+          className='rounded-lg object-cover bg-black h-52'
           alt={data?.title}
           width={400}
-          height={550}
+          height={300}
           priority
         />
         <div className={style.detail}>
