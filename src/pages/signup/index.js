@@ -93,9 +93,8 @@ function Signup() {
             <TextInput
               name='name'
               className={style.input}
-              required
               type='text'
-              {...formik.getFieldProps('name')}
+              formik={formik}
               hint='Full Name'
             />
             {formik.errors && (
@@ -107,10 +106,9 @@ function Signup() {
           <div className={style['input-control']}>
             <TextInput
               className={`${style.input} ${error && 'border-red-400'}`}
-              required
               name='email'
               type='email'
-              {...formik.getFieldProps('email')}
+              formik={formik}
               hint='Email'
             />
             {formik.errors && (
@@ -125,10 +123,9 @@ function Signup() {
             <span className='flex items-center'>
               <TextInput
                 className={style.input}
-                required
                 type={toggle ? 'text' : 'password'}
                 name='password'
-                {...formik.getFieldProps('password')}
+                formik={formik}
                 hint='Password'
               />
               {!toggle ? (
@@ -166,10 +163,9 @@ function Signup() {
           <div className={style['input-control']}>
             <TextInput
               className={style.input}
-              required
               type='text'
               name='city'
-              {...formik.getFieldProps('city')}
+              formik={formik}
               hint='City'
             />
             {formik.errors && (

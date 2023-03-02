@@ -45,14 +45,18 @@ async function handler(req, res) {
           },
         });
 
-        body.tags.forEach(async function (tag) {
-          await prisma.tag.create({
+        const tags = [];
+
+        for (const tag of body.tags) {
+          const res = await prisma.tag.create({
             data: {
               value: tag.value,
               accommodationId: accommodation.id,
             },
           });
-        });
+
+          tags.push(res);
+        }
 
         const images = [];
 
@@ -68,7 +72,11 @@ async function handler(req, res) {
           images.push(res);
         }
 
-        if (images.length >= 4) return res.status(201).json({ status: 'Done' });
+        if (
+          images.length === body.images.length &&
+          tags.length === body.tags.length
+        )
+          return res.status(201).json({ status: 'Done' });
       } catch (error) {
         console.log('error', error.message);
         return res.status(500).json({

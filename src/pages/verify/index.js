@@ -27,12 +27,12 @@ function Verify() {
 
   return (
     <form onSubmit={submitHandler} className={style.form}>
-      <h1 className='text-2xl'>Verify your phone number</h1>
+      <h1 className='text-xl dark:text-gray-100'>Verify your phone number</h1>
       <input
         onChange={(e) => setCode(e.target.value)}
         value={code}
         type='text'
-        className={style.input}
+        className={`dark:bg-[#112240] ${style.input}`}
         placeholder='Inter code'
       />
       <button className={style.btn}>{isLoading ? <Loader /> : 'Send'}</button>

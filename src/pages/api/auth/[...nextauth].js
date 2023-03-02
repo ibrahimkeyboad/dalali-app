@@ -52,7 +52,6 @@ export const authOptions = {
         }
 
         await prisma.$disconnect();
-
         return result;
       },
     }),

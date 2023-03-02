@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import HeadC from '../../components/head';
-import { signIn, signOut } from 'next-auth/react';
+import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import Loader from '../../components/spinner/loader';
@@ -42,16 +42,10 @@ function LoginPage() {
     });
     console.log(res);
 
-    if (res.ok === false || res.ok === true) {
-      setIsLoading(false);
-
-      if (res.error) {
-        setError(res.error);
-      }
-    }
-
-    if (res.ok === true) {
+    if (session.user) {
       navigate.push('/profile');
+    } else {
+      setError(res.error);
     }
   }
 
@@ -63,7 +57,6 @@ function LoginPage() {
           onSubmit={formik.handleSubmit}
           className='sm:w-[80%] md:w-[60%] lg:w-[50%] my-auto shadow-lg p-10  m-auto gap-5 flex flex-col '>
           <h2>Login</h2>
-          <button onClick={() => signOut()}>off</button>
           <div>
             <input
               className='border-2 p-2 w-full dark:bg-[#112240] outline-none rounded-lg'

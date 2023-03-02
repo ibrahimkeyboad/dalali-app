@@ -98,7 +98,7 @@ function Header() {
               Login
             </Link>
             <Link
-              className='dark:bg-[#64FFDA] font-semibold text-white px-3 py-2 rounded-xl'
+              className='dark:border-[#64FFDA] dark:text-[#64FFDA] border-2 text-white px-3 py-2 rounded-lg'
               href='/signup'>
               Get Start
             </Link>
