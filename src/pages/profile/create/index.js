@@ -102,7 +102,7 @@ function Create() {
       <HeadC title='Create Property' description='create property to upload' />
       <Aside />
       <div className={style.heading}>
-        <h2 className='text-[#d9dfe8]'>Add new property</h2>
+        <h2 className='dark:text-[#d9dfe8] text-gray-700'>Add new property</h2>
       </div>
       <form
         onSubmit={submitHnadler}
@@ -111,7 +111,9 @@ function Create() {
 
         {/* Descrptions */}
         <div className='flex gap-4 flex-col'>
-          <label className='text-2xl text-[#CCD6F6] font-bold'>Details</label>
+          <label className='text-2xl dark:text-[#CCD6F6] text-gray-700 font-bold'>
+            Details
+          </label>
           <div className={style.details}>
             <div
               className={`grid dark:bg-[#112240] ${style.container} md:grid-cols-2 md:items-end gap-6 items-start`}>
@@ -177,7 +179,7 @@ function Create() {
           />
         </div>
 
-        <button type='submit' className={style.btn}>
+        <button type='submit' className={`dark:text-[#d9dfe8] ${style.btn}`}>
           Create
         </button>
       </form>

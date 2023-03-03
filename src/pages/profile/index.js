@@ -31,20 +31,9 @@ function AllProperties({ user, data }) {
       <ProfileHeader user={user} />
 
       <main>
-        <nav className='flex justify-center gap-8 p-6'>
-          <Link
-            className='text-[#034047] font-bold'
-            href='/profile/all-properties'>
-            All data
-          </Link>
-          <Link href='/profile/disable-properties'>Taken Propeties</Link>
-        </nav>
         {data.length === 0 ? (
           <div className='grid justify-center'>
             <h1 className='text-center text-lg'>No data</h1>
-            {/* <button className='' onClick={logoutHandler}>
-              Log out
-            </button> */}
 
             <Link href='/profile/create'>Start upload</Link>
           </div>

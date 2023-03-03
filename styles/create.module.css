@@ -50,5 +50,5 @@
 }
 
 .btn {
-  @apply border-[#496483] border-2 text-[#d9dfe8] font-bold text-xl my-5 py-2 self-center px-20 rounded-lg;
+  @apply border-[#496483] border-2  font-bold text-xl my-5 py-2 self-center px-20 rounded-lg;
 }
