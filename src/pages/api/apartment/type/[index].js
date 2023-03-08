@@ -4,7 +4,7 @@ async function handler(req, res) {
   try {
     const city = await prisma.accommodation.findMany({
       where: {
-        type: req.query.type,
+        type: req.query.index,
       },
 
       include: {
