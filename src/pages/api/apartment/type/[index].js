@@ -4,9 +4,7 @@ async function handler(req, res) {
   try {
     const city = await prisma.accommodation.findMany({
       where: {
-        location: {
-          contains: req.query.city,
-        },
+        type: req.query.type,
       },
 
       include: {
